@@ -1,4 +1,4 @@
-## bar chart
+# Data Viz
 pacman::p_load(pacman, tidyverse)
 
 diamonds
@@ -8,6 +8,7 @@ plot(diamonds$color)
 diamonds %>%
   select(color) %>%
   plot()
+
 ####################################
 
 ### BAR CHART ###
