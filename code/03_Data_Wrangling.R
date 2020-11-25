@@ -32,6 +32,14 @@ new_df <- filter(new_df, bidenWon == 'yes' & total_votes > 100000)
 
 arrange(new_df, desc(total_votes))
 
+# Aggregating
+mutate(df, votes_times_two = total_votes + total_votes)
+
+mutate(df, votes_temp = total_votes * 3 / 5)
+
+mutate(df, votes_temp = (total_votes * 2) + (total_votes * -1))
+
+
 
 
 # Clear packages

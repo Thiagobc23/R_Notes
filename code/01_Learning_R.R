@@ -104,6 +104,9 @@ l <- list(a, age, g, h, c) # can add almost anything to a list
 
 as.data.frame(j)
 
+## check field types
+sapply(df, class)
+
 # Packages
 
 # https://www.r-project.org/ -> CRAN -> https://cloud.r-project.org/ ->
