@@ -6,7 +6,8 @@ https://github.com/genomicsclass/windows#installing-r
 
 ## Courses
 https://online-learning.harvard.edu/course/data-science-visualization?delta=1  
-https://www.linkedin.com/learning/learning-r-2
+https://www.linkedin.com/learning/learning-r-2  
+https://www.linkedin.com/learning/data-visualization-in-r-with-ggplot2  
 
 ## Resources
 https://github.com/qinwf/awesome-R  
