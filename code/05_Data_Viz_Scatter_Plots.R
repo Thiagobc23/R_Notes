@@ -1,4 +1,4 @@
-# Data Viz ggplot2
+# Data Viz ggplot2 - scatter plots
 
 #install.packages("tidyverse")
 #install.packages("ggmap")
@@ -45,6 +45,26 @@ ggplot(data=planets) +
                            y=orbital_period, 
                            size=diameter,
                            color=population), alpha=0.5)
+
+# load dataset
+pres <- read_csv('data/president_county_candidate.csv')
+pres
+
+# recode
+pres <- pres %>%
+  mutate(name = recode(candidate, 
+                       "Donald Trump" = "Trump",
+                       "Joe Biden" = "Biden",
+                       .default = "Others"))
+
+# Scatter plot
+ggplot(data=pres) +
+  geom_point(mapping = aes(x=name, 
+                           y=total_votes), alpha=0.5)
+# Jitter plot
+ggplot(data=pres) +
+  geom_jitter(mapping = aes(x=name, 
+                           y=total_votes), alpha=0.5)
 
 
 # Clear environment

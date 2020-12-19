@@ -1,4 +1,4 @@
-# Data Viz ggplot2 - line charts
+# Data Viz ggplot2 - bar charts
 
 library(tidyverse)
 
