@@ -15,7 +15,7 @@ https://github.com/rstudio/rmarkdown
 https://adv-r.hadley.nz/index.html  
 
 ## Data
-https://www.kaggle.com/rounakbanik/pokemon  
+https://www.kaggle.com/abcsds/pokemon 
 https://www.kaggle.com/jsphyg/star-wars  
 https://www.kaggle.com/unanimad/us-election-2020  
 https://www.kaggle.com/karangadiya/fifa19  

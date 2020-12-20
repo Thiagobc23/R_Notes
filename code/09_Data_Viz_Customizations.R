@@ -21,7 +21,8 @@ poke <- poke %>%
                                 "Water" = "Water",
                                 "Grass" = "Grass",
                                 "Normal" = "Normal",
-                                .default = "Others")))
+                                .default = "Others"))
+         )
 
 
 summary(poke)
@@ -142,6 +143,30 @@ ggplot(data = poke) +
   geom_hline(yintercept = mean(poke$Defense))+
   geom_vline(xintercept = mean(poke$Attack))
 
+
+# another example
+ggplot(data = poke) +
+  geom_point(mapping = aes(x=Attack, y=Defense, color=Legendary))+
+  annotate('text', label='Shuckle', x=20, y=230)+
+  annotate('text', label='Deoxys', x=174, y=20) +
+  scale_color_manual(values = c('#2ACC74', '#E9652D'),
+                    guide=guide_legend(title = 'Legendary',
+                                       nrow=1,
+                                       reverse=TRUE),
+                    labels = c('No', 'Yes'))+
+  theme(legend.position = 'top', 
+        legend.key = element_rect(colour = NA, fill = NA),
+        plot.background = element_blank(),
+        panel.background = element_blank(),
+        panel.grid.major = element_line(color='#D9D9D9'))+
+  geom_hline(yintercept = mean(poke$Defense), 
+             color='#2593D3',
+             size=1)+
+  geom_vline(xintercept = mean(poke$Attack), 
+             color='#2593D3',
+             size=1)+
+  labs(title="Pokemon Attack X Defense",
+       subtitle = "Stats values")
 
 # Clear environment
 rm(list = ls()) 
