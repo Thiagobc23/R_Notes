@@ -61,6 +61,28 @@ ggplot(data = poke) +
         panel.grid.major.y = element_line(color='black'))
 
 
+# X and Y labels
+ggplot(data = poke) +
+  geom_bar(mapping = aes(x=tp, fill=tp2))+
+  theme(plot.background = element_rect(fill = "grey"),
+        panel.background = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.major.y = element_line(color='black'))+
+  ylab('Number of Pokemon')+
+  xlab('Pokemon Main Type')
+
+# limits
+ggplot(data = poke) +
+  geom_bar(mapping = aes(x=tp, fill=tp2))+
+  theme(plot.background = element_rect(fill = "grey"),
+        panel.background = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.major.y = element_line(color='black'))+
+  ylab('Number of Pokemon')+
+  xlab('Pokemon Main Type')+
+  ylim(0,450)
+
+
 
 # plot.backgroud()
 # panel.backgroud()
