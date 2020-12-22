@@ -204,22 +204,22 @@ ggplot(data = poke) +
 # Example Custom Viz
 ggplot(data = poke) +
   geom_point(mapping = aes(x=Attack, y=Defense, color=Legendary))+
-  annotate('text', label='Shuckle', x=20, y=230, color='white')+
-  annotate('text', label='Deoxys', x=174, y=20, color='white') +
   scale_color_manual(values = c('#F85C54','#2ACC74'),
                     guide=guide_legend(title = 'Legendary',
                                        nrow=1,
                                        reverse=TRUE),
                     labels = c('No', 'Yes'))+
-  geom_hline(yintercept = mean(poke$Defense), 
-             color='#F85C54',
-             size=1, alpha=0.5)+
-  geom_vline(xintercept = mean(poke$Attack), 
-             color='#F85C54',
-             size=1, alpha=0.5)+
   labs(title="Pokemon Attack X Defense",
        subtitle = "Stats values from Pokemon Games (Not Pokemon Cards or Pokemon GO",
        caption = "Source: https://www.kaggle.com/abcsds/pokemon")+
+  geom_hline(yintercept = mean(poke$Defense), 
+             color='white',
+             size=1, alpha=0.5)+
+  geom_vline(xintercept = mean(poke$Attack), 
+             color='white',
+             size=1, alpha=0.5)+
+  annotate('text', label='Shuckle', x=20, y=230, color='white')+
+  annotate('text', label='Deoxys', x=174, y=20, color='white') +
   theme(legend.position = 'bottom', 
         legend.background = element_blank(),
         legend.key = element_rect(colour = NA, fill = NA),
@@ -238,6 +238,7 @@ ggplot(data = poke) +
         plot.subtitle = element_text(color = "white"),
         plot.caption = element_text(color = "white", face = "italic"))
 
+  
 # Clear environment
 rm(list = ls()) 
 
