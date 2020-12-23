@@ -210,7 +210,7 @@ ggplot(data = poke) +
                                        reverse=TRUE),
                     labels = c('No', 'Yes'))+
   labs(title="Pokemon Attack X Defense",
-       subtitle = "Stats values from Pokemon Games (Not Pokemon Cards or Pokemon GO",
+       subtitle = "Stats values from Pokemon Games (Not Pokemon Cards or Pokemon GO)",
        caption = "Source: https://www.kaggle.com/abcsds/pokemon")+
   geom_hline(yintercept = mean(poke$Defense), 
              color='white',
@@ -218,8 +218,12 @@ ggplot(data = poke) +
   geom_vline(xintercept = mean(poke$Attack), 
              color='white',
              size=1, alpha=0.5)+
-  annotate('text', label='Shuckle', x=20, y=230, color='white')+
-  annotate('text', label='Deoxys', x=174, y=20, color='white') +
+  annotate(geom = "curve", x = 15, y = 210, xend = 10, yend = 230, color='white', 
+           curvature = .3, arrow = arrow(length = unit(2, "mm"))) +
+  annotate('text', label='Shuckle', x=15, y=210, color='white', hjust = "left")+
+  annotate(geom = "curve", x = 170, y = 30, xend = 180, yend = 20, color='white', 
+           curvature = .3, arrow = arrow(length = unit(2, "mm"))) +  
+  annotate('text', label='Deoxys', x=170, y=33, color='white', hjust = "right") +
   theme(legend.position = 'bottom', 
         legend.background = element_blank(),
         legend.key = element_rect(colour = NA, fill = NA),
@@ -233,11 +237,13 @@ ggplot(data = poke) +
         plot.background = element_rect(fill = "#424242"),
         panel.background = element_rect(fill = "#424242"),
         panel.grid.major = element_line(color='#848484'),
-        panel.grid.minor = element_blank(),
+        panel.grid.minor.y = element_blank(),
+        panel.grid.minor.x = element_line(color='#848484'),
         plot.title = element_text(color = "white", size = 12, face = "bold"),
         plot.subtitle = element_text(color = "white"),
-        plot.caption = element_text(color = "white", face = "italic"))
-
+        plot.caption = element_text(color = "white", face = "italic"))+
+  ylim(0,250)+
+  xlim(0,200)
   
 # Clear environment
 rm(list = ls()) 
