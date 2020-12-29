@@ -17,6 +17,8 @@ https://www.linkedin.com/learning/learning-the-r-tidyverse
 https://github.com/qinwf/awesome-R  
 https://github.com/rstudio/rmarkdown  
 https://adv-r.hadley.nz/index.html  
+https://ggplot2-book.org/  
+https://www.datanovia.com/en/blog/category/ggplot2/  
 
 ## Data
 https://www.kaggle.com/abcsds/pokemon 
