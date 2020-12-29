@@ -8,6 +8,10 @@ https://github.com/genomicsclass/windows#installing-r
 https://online-learning.harvard.edu/course/data-science-visualization?delta=1  
 https://www.linkedin.com/learning/learning-r-2  
 https://www.linkedin.com/learning/data-visualization-in-r-with-ggplot2  
+https://www.linkedin.com/learning/learning-the-r-tidyverse  
+
+## Articles
+[Working with JSON data in very simple way](https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89)  
 
 ## Resources
 https://github.com/qinwf/awesome-R  

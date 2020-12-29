@@ -50,6 +50,12 @@ class(read.csv('data/MOCK_DATA.csv'))
 read_csv('data/MOCK_DATA.csv')
 class(read_csv('data/MOCK_DATA.csv'))
 
+# read json
+library(jsonlite)
+
+df <- fromJSON("data/MOCK_DATA.json")
+df
+
 
 # Clear packages
 p_unload(all)  # Remove all add-ons
