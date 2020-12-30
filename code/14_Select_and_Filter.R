@@ -98,6 +98,18 @@ df %>%
 df %>% 
   filter(HP >= 100 & Attack >= 100)
 
+# filter to get NA values
+df %>%
+  filter(is.na(`Type 2`))
+
+# filter get only complete rows
+df %>%
+  filter(complete.cases(.))
+
+# filter get only incomplete rows
+df %>%
+  filter(!complete.cases(.))
+
 # arrange / sort 
 ## sort by type 1 ascending and then by Name descending
 df %>%
