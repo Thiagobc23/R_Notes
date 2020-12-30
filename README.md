@@ -19,10 +19,12 @@ https://github.com/rstudio/rmarkdown
 https://adv-r.hadley.nz/index.html  
 https://ggplot2-book.org/  
 https://www.datanovia.com/en/blog/category/ggplot2/  
+https://www.guru99.com/r-select-filter-arrange.html  
 
 ## Data
 https://www.kaggle.com/abcsds/pokemon 
 https://www.kaggle.com/jsphyg/star-wars  
 https://www.kaggle.com/unanimad/us-election-2020  
 https://www.kaggle.com/karangadiya/fifa19  
-https://www.mockaroo.com/
+https://www.kaggle.com/aaron7sun/stocknews  
+https://www.mockaroo.com/  
