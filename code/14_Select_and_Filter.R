@@ -110,7 +110,6 @@ df2
 df2 %>%
   filter(Date == min(Date))
 
-
 # Clear packages
 p_unload(all)  # Remove all add-ons
 detach("package:datasets", unload = TRUE)  # For base

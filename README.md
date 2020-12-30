@@ -20,6 +20,7 @@ https://adv-r.hadley.nz/index.html
 https://ggplot2-book.org/  
 https://www.datanovia.com/en/blog/category/ggplot2/  
 https://www.guru99.com/r-select-filter-arrange.html  
+https://www.rdocumentation.org/packages/tidyr/  
 
 ## Data
 https://www.kaggle.com/abcsds/pokemon 
