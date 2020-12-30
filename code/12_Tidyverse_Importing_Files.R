@@ -56,6 +56,8 @@ library(jsonlite)
 df <- fromJSON("data/MOCK_DATA.json")
 df
 
+# read rdata
+load(file = "data/Pokemon.rdata")
 
 # Clear packages
 p_unload(all)  # Remove all add-ons
