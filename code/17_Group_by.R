@@ -117,7 +117,7 @@ ts %>%
   ggplot(aes(x=Category, y = after_peak)) +
   geom_col()
 
-# cumany - check records before some event
+# cumall - check records before some event
 ts %>%
   group_by(Category) %>%
   mutate(running_mean = cummean(Value)) %>%
@@ -157,6 +157,16 @@ new_df <- df %>%
 
 new_df
 
+# functions with group_by_
+my_func <- function(df, group){
+  df %>%
+    group_by_(group) %>%
+    summarise_if(is.numeric, mean) %>%
+    ungroup()
+  
+}
+
+my_func(df, '`Type 1`')
 
 # Clear packages
 p_unload(all)  # Remove all add-ons

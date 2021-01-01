@@ -127,6 +127,14 @@ df2
 df2 %>%
   filter(Date == min(Date))
 
+# simple function
+my_func <- function(df, col_name){
+  df %>%
+    select(col_name)
+}
+
+my_func(df, 'Attack')
+
 # Clear packages
 p_unload(all)  # Remove all add-ons
 detach("package:datasets", unload = TRUE)  # For base
