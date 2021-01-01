@@ -13,6 +13,11 @@ head(df)
 df %>%
   select(`Type 1`, `Type 2`)
 
+# select with list
+columns <- c('Total', 'HP', 'Attack')
+df %>%
+  select(columns)
+
 # select columns and get unique combinations
 df %>%
   select(`Type 1`, `Type 2`) %>%
