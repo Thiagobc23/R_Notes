@@ -1,0 +1,50 @@
+---
+title: "My Presentation"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Adding a Slide
+A new slide can be created with '##'  
+
+## Links
+[google](http://www.google.com)  
+
+## Adding Code
+
+We can add a code chunk with ctrl+alt+i
+
+```{r name_of_the_code_chunk}
+curve(x^2, from = -10, to = 10)
+
+```
+
+We can also add inline code `r 25+25^2`
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
