@@ -1,6 +1,7 @@
 ---
 title: "My Presentation"
 output: slidy_presentation
+css: "my_presentation.css"
 ---
 
 ```{r setup, include=FALSE}
@@ -23,12 +24,26 @@ A new slide can be created with '##'
 
 We can add a code chunk with ctrl+alt+i
 
-```{r name_of_the_code_chunk}
+```{r unique_name}
 curve(x^2, from = -10, to = 10)
 
 ```
 
 We can also add inline code `r 25+25^2`
+
+## Adding Code
+
+We can add the code and result by clicking the "Modify Chunk Option" gear.
+On the output dropbox we can select 'Show code and output'.
+Another way is to write echo=TRUE after the code chunk name.
+
+```{r name_of_the_code_chunk, echo=TRUE}
+curve(x^2, from = -10, to = 10)
+
+```
+
+## Add Image
+![dog](https://post.greatist.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg)
 
 ## Slide with Bullets
 

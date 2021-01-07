@@ -1,0 +1,54 @@
+h1 {
+    color: #165A8C;
+    margin-top: 80px;
+}
+
+body {
+    background-color: #E5EAEE;
+}
+
+If have internet
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans");
+
+/* Slide Titles */
+h1 {
+    color: #165A8C;
+    margin-top: 80px;
+    text-align: center;
+}
+
+section{
+  margin-top: 60px;
+  padding-top: 60px; 
+}
+
+p {
+    margin-bottom: 25px;
+}
+
+body
+{
+  color: #165A8C;
+  background-color: #E5EAEE;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.emphasized {
+   font-size: 1.2em;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+a:link {
+    color: #C93A20;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+}
