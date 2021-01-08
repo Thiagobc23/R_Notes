@@ -1,0 +1,33 @@
+---
+title: "23_Shiny"
+author: "Thiago Carvalho"
+date: "1/7/2021"
+css: "my_presentation.css"
+output: slidy_presentation
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Shinny
+
+```{r my_plot}
+library(shiny)
+shinyApp(
+  ui = fluidPage(
+  sliderInput("exponent",
+              label="Exponent",
+              min=1,
+              max=10,
+              value=2),
+  plotOutput("my_plot")
+  ),
+  server = function(input, output){
+    output$my_plot <- renderPlot(
+      curve(x^input$exponent, from = -5, to = 5)
+    )
+  }
+)
+```
