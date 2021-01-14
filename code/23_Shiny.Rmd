@@ -11,7 +11,7 @@ runtime: shiny
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Shinny
+## Shinny - slider
 
 ```{r my_plot}
 library(shiny)
@@ -30,4 +30,68 @@ shinyApp(
     )
   }
 )
+```
+
+## Shinny - select
+
+```{r my_other_plot}
+shinyApp(
+  ui = fluidPage(
+    # WARNING - selectInput converts the choices to strings
+  selectInput("exponent",
+              label = "Exponent",
+              choices = 1:10,
+              selected = 2),
+  plotOutput("my_other_plot")
+  ),
+  server = function(input, output){
+    output$my_other_plot <- renderPlot({
+      # printing the variables is a good way of debugging
+      print(input$exponent)
+      curve(x^as.numeric(input$exponent), from = -5, to = 5)
+    }
+    )
+  }
+)
+```
+
+## shiny - histogram
+
+```{r my_histogram}
+shinyApp(
+  ui = fluidPage(
+    sliderInput("no_data", label = "Number of data",
+                min = 1000,
+                max = 5000,
+                value = 1000),
+    sliderInput("mean", label = "Mean",
+                min = 0,
+                max = 8,
+                value = 3),
+    sliderInput("sd", label = "Standard Deviation",
+                min = 1,
+                max = 10,
+                value = 2),
+    uiOutput("xlim_slider"),
+    plotOutput("histogram")),
+  server = function(input, output){
+    output$xlim_slider <- renderUI({
+      
+      ## condition to avoid errors when loading for the first time 
+      if(is.null(input$mean)){
+        return()
+      }
+      ## add a slider input after the other inputs
+      sliderInput("xlim", label = "xlim",
+                min = input$mean,
+                max = 30,
+                value = 10)
+    })
+    output$histogram <- renderPlot(
+      hist(rnorm(input$no_data, mean = input$mean, sd = input$sd), 
+           xlim = c(-input$xlim, input$xlim))
+  )
+  }
+)
+
 ```
